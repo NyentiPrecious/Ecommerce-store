@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+ 
+</head>
+<body>
+
+    <nav class="social">
+        <ul>
+            <li><a href="https://twitter.com/Nyenti Precious">Twitter <i class="fa fa-twitter twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/Precious Gilda/">Instagram <i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"> Google+ <i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.facebook.com/Precious Gilda/">Facebook <i class="fa fa-facebook"></i></a></li>
+        </ul>
+    </nav>
+
+ 
+
+    <div class="bg-box">
+        <div class="box">
+           <div class="tab">
+              <button id="loginbtn" onclick="myfunction('login')" class="tab-btn active">Login</button>
+              <button id="registerbtn" onclick="myfunction('register')" class="tab-btn">Register</button>
+           </div>
+           <div class="form-controler" id="login">
+              <div class="main-atas">
+                 <i class="icon fas fa-user-shield"></i>
+               <a href="/main.html" > <h1 class="display">Login Here</h1></a> 
+              </div>
+              <form action="">
+                 <input type="text" placeholder="Email/Phone number">
+                 <input type="text" placeholder="Password">
+                 <button type="submit" id="login-btn">Login</button>
+              </form>
+              <a class="link" href="#">Forget password</a>
+              <a class="link" href="#">Don't have account</a>
+           </div>
+           <div class="form-controler" id="register">
+              <div class="main-atas register">
+                 <i class="icon fas fa-user-plus"></i>
+                 <h1 class="display">Register Here</h1>
+              </div>
+              <form action="">
+                 <input type="text" placeholder="Email/Phone number">
+                 <input type="text" placeholder="Enter new password">
+                 <input type="text" placeholder="Confirm password">
+                 <button type="submit" id="login-btn">register</button>
+
+                 
+
+                 <div class="tengahan">
+                    <input type="checkbox" id="ch"><label for="ch" class="label-text">I accept the privacy policy</label>
+                 </div>
+              </form>
+           </div>
+        </div>
+     </div>
+
+
+
+
+  <script>
+
+$("#login-btn").click(function(){
+    $(this).addClass("btn-shadow");
+  })
+  $("#login-btn").mouseout(function(){
+    $(this).removeClass("btn-shadow");
+  })
+  function myfunction(isinya){
+    if(isinya == "register"){
+      $("#loginbtn").removeClass("active"); $("#registerbtn").addClass("active");
+      $("#login").css({"display":"none"}); $("#register").css({"display":"block"});
+    }else {
+      $("#registerbtn").removeClass("active"); $("#loginbtn").addClass("active");
+      $("#register").css({"display":"none"}); $("#login").css({"display":"block"});
+    }
+  }
+
+    </script>
+    
+</body>
+</html>
